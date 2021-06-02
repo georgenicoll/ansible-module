@@ -5,5 +5,5 @@
   - george_module:
       directory: /tmp
       file_name: George
-      state: Stopped
+      state: Running
 

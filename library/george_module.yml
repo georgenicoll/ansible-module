@@ -42,7 +42,6 @@ EXAMPLES = r'''
 '''
 
 RETURN = r'''
-# These are examples of possible return values, and in general should use other names for return values.
 file:
     description: The state file
     type: str
@@ -131,8 +130,14 @@ def run_module():
             result['current_state'] = desired_state
             result['changed'] = True
             result['message'] = 'done'
+            result['diff'] = dict(
+                before='',
+                before_state=current_state,
+                after='',
+                after_state=desired_state,
+            )
         except IOError:
-            result['message'] = 'failed: IOError'
+            result['failed'] = 'IOError'
     else:
        result['current_state'] = desired_state
        result['message'] = 'done'
