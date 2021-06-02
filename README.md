@@ -1,2 +1,2 @@
 # ansible-module
-Noddy module to understand the basics of how they work.
+A noddy module and playbook to understand the basics of how modules work.
