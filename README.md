@@ -1,2 +1,2 @@
 # ansible-module
-My Messings around with ansible modules
+Noddy module to understand the basics of how they work.
